@@ -9,16 +9,28 @@ console.log("Aufgabe 1")
 // Es soll das Volumen eines Würfels in Quadratzentimeter (cm3) ausgegeben werden. Arbeiten Sie mit einem Objekt und sprechenden Eigenschaften.
 // Geben Sie das Volumen in einem Antwortsatz auf der Konsole aus.
 
+class Wuerfel{
+    constructor(){
+        this.Seitenlaenge 
+    } 
+}
 
+let wuerfel = new Wuerfel()
+wuerfel.Seitenlaenge = 20 
 
+let volumen = wuerfel.Seitenlaenge * wuerfel.Seitenlaenge * wuerfel.Seitenlaenge
+
+console.log('Das Volumen des Würfels mit der Seitenlänge ' + wuerfel.Seitenlaenge + ' beträgt ' + volumen + ' cm3.')
 
 // 1b 
 // Wenn das Volumen 1000 oder mehr Quadratzentimeter beträgt soll eine Meldung auf der Konsole ausgegeben werden, die besagt,
 // dass das Volumen 1000 oder mehr Quadratzentimeter beträgt.
 
-
-
-
+if(volumen>1000){
+    console.log('Das Volumen des Würfels beträgt 1000 cm3 oder mehr.')
+}else{
+    console.log('')
+}
 
 // 1c) - Nur Klausurschreiber
 // Nutzen Sie die Math-Bibliothek .sqrt(), um die Wurzel aus dem Volumen zu errechnen. Geben Sie die Kantenlänge in einem Antwortsatz aus.
@@ -33,18 +45,45 @@ console.log("Aufgabe 2")
 // 2a)
 // Definieren Sie die class
 
-
+class Zeugnisse {
+    constructor(){
+        this.Deutsch
+        this.Mathe
+        this.Englisch
+        this.Betriebswirtschaftslehre
+        this.Wirtschaftsinformatik
+        this.Gesellschaftslehre
+        this.Sport
+        this.Volkswirtschaftslehre
+    }
+}
 
 // 2b)
 // Deklarieren, Instanziieren und Initialisieren Sie ein Objekt von der Zeignisklasse.
 
+let zeugnisse = new Zeugnisse()
+zeugnisse.Deutsch = 2
+zeugnisse.Mathe = 4
+zeugnisse.Englisch = 1
+zeugnisse.Betriebswirtschaftslehre = 2
+zeugnisse.Wirtschaftsinformatik = 3
+zeugnisse.Gesellschaftslehre = 2
+zeugnisse.Sport = 1
+zeugnisse.Volkswirtschaftslehre = 2
 
 
 
 // 2c)
 // Geben Sie die Eigenschaftswerte Ihres Objekts auf der Konsole aus.
 
-
+console.log('Der Schüler hat folgende Noten in den ausgewählten Fächern: Deutsch: ' + zeugnisse.Deutsch,
+                                                                        ' Mathe: ' + zeugnisse.Mathe,
+                                                                        ' Englisch: ' + zeugnisse.Englisch,
+                                                                        ' Betriebswirtschaftslehre: ' + zeugnisse.Betriebswirtschaftslehre,
+                                                                        ' Wirtschaftsinformatik: ' + zeugnisse.Wirtschaftsinformatik,
+                                                                        ' Gesellschaftslehre: ' + zeugnisse.Gesellschaftslehre,
+                                                                        ' Sport: ' + zeugnisse.Sport,
+                                                                        ' Volkswirtschaftslehre: ' + zeugnisse.Volkswirtschaftslehre)
 
 // 2d) NUR KLAUSURSCHREIBER
 // Berechnen Sie die Durchnittsnote Ihres Objekts. Geben Sie die Durchschnittsnote auf der Konsole aus.
@@ -86,29 +125,44 @@ console.log("Aufgabe 3")
 // 3a)
 // Deklarieren, Instanziieren Sie ein Objekt mit allen genannten Eigenschaften. 
 
+class Zeitung{
+    constructor(){
+        this.Rabatt
+        this.NettoRechnungsbetrag
+        this.MwSt
+        this.BruttoRechnungsbetrag
+        this.Skonto
+        this.Zahlungsbetrag
+    }
+}
 
-
+let zeitung = new Zeitung()
 
 // 3b
 // Initialisieren Sie Ihr Objekt mit den gegebenen Werten. 
 // Geben Sie die einen Anwortsatz auf der Konsole aus.
 
+zeitung.NettoRechnungsbetrag = 370
+zeitung.MwSt = 7
 
+
+console.log('Der Netto-Rechnungsbetrag beträgt ' + zeitung.NettoRechnungsbetrag + ' EUR und die MwSt beträgt ' + zeitung.MwSt + ' %.' )
 
 // 3c)
 // Berechnen Sie die MwSt in einer sprechenden Variablen. Geben Sie einen Anwortsatz auf der Konsole aus.
 
+let MwSt = zeitung.NettoRechnungsbetrag * zeitung.MwSt / 100 
 
-
-
+console.log('Die Mehrwertsteuer betragen ' + MwSt + ' EUR.')
 
 // 3d)
 // Berechnen Sie den Eigenschaftswert des Brutto-Rechnungsbetrags. 
 // Wenn die Produktart sich ändert, muss Ihre Berechnung sich anpassen.
 // Geben Sie den Wert in einen Anwortsatz auf der Konsole aus.
 
+zeitung.BruttoRechnungsbetrag = zeitung.NettoRechnungsbetrag + (zeitung.NettoRechnungsbetrag/100 * 7)
 
-
+console.log('Der Brutto-Rechnungsbetrag beträgt: ' + zeitung.BruttoRechnungsbetrag + 'EUR.')
 
 
 // 3e) NUR KLAUSURSCHREIBER
